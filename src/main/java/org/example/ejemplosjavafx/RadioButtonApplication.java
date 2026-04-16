@@ -1,5 +1,7 @@
 package org.example.ejemplosjavafx;
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -49,6 +51,17 @@ public class RadioButtonApplication extends Application {
                 mensaje.setText("No has seleccionado nada");
             }
         });
+
+        //asignar evento al radiobutton
+        /*radioGroup.selectedToggleProperty().addListener(
+                (observableValue, viejoValor, nuevoValor) ->
+                {
+                    if (nuevoValor != null) {
+                        RadioButton seleccionado = (RadioButton) nuevoValor;
+                        mensaje.setText(seleccionado.getText());
+                    }
+        }
+        );*/
 
         // Layout principal
         VBox root = new VBox(10, hbox, boton, mensaje);

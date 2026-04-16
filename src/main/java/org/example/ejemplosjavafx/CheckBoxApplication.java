@@ -16,6 +16,7 @@ public class CheckBoxApplication extends Application {
 
         // CheckBox
         CheckBox checkBox1 = new CheckBox("Rojo");
+
         CheckBox checkBox2 = new CheckBox("Verde");
         CheckBox checkBox3 = new CheckBox("Azul");
 
@@ -24,6 +25,13 @@ public class CheckBoxApplication extends Application {
 
         // Label para mostrar resultado
         Label mensaje = new Label("Selecciona opciones...");
+        //asigar evento al checkbox
+        /*checkBox1.setOnAction(e ->{
+            if(checkBox1.isSelected())
+                mensaje.setText("rojo");
+            else
+                mensaje.setText("no rojo");
+        });*/
 
         // Evento del botón
         boton.setOnAction(e -> {

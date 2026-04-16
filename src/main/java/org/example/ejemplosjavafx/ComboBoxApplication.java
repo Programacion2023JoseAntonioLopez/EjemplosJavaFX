@@ -1,6 +1,8 @@
 package org.example.ejemplosjavafx;
 
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -35,6 +37,11 @@ public class ComboBoxApplication extends Application {
                 mensaje.setText("No hay selección");
             }
         });
+        //asignar evento al Combobox
+        /*comboBox.valueProperty().addListener(
+                (observableValue, old, nuevo) ->
+                        mensaje.setText(nuevo)
+        );*/
 
         // Layout
         VBox root = new VBox(10, comboBox, mensaje);
